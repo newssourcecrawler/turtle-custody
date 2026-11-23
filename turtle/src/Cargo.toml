@@ -1,0 +1,29 @@
+[package]
+name = "turtle"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+
+[lints]
+workspace = true
+
+[lib]
+name = "turtle"
+path = "lib.rs"
+
+# Milestone 0: single binary CLI only (no daemon).
+[[bin]]
+name = "turtle"
+path = "main.rs"
+
+[dependencies]
+blake3 = "1"
+crc32fast.workspace = true
+loom.workspace = true
+memmap2.workspace = true
+nsc_block.workspace = true
+nsc_frame.workspace = true
+rand = "0.10.0"
+serde.workspace = true
+serde_json.workspace = true

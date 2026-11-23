@@ -1,0 +1,28 @@
+[package]
+name = "nsc_block"
+version = "0.1.0"
+edition = "2021"
+license = "Apache-2.0"
+description = "Deterministic block identity and portable block pack format"
+authors = ["NSC"]
+publish = false
+
+[lib]
+path = "src/lib.rs"
+
+[features]
+default = []
+# Compression is intentionally OFF in v0
+# deflate = ["dep:flate2"]
+
+[dependencies]
+# --- hashing / checksums ---
+blake3 = { version = "1.5", default-features = false }
+crc32fast = { version = "1.4", default-features = false }
+
+
+# Optional compression (NOT enabled in v0)
+# flate2 = { version = "1.0", default-features = false, optional = true }
+
+[dev-dependencies]
+hex = "0.4"
