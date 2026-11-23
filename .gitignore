@@ -1,0 +1,28 @@
+# Rust build artifacts
+/target/
+**/target/
+
+# Local verification evidence
+/evidence/
+
+# macOS metadata
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Temporary files
+*.tmp
+*.bak
+*.log
+
+# Local environment and secrets
+.env
+.env.*
+!.env.example
